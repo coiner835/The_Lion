@@ -26,7 +26,8 @@ body {
 
 #roadmap {
   background: url('images/second_Pa.jpg') no-repeat center center;
-  background-size: cover;
+  background-size: cover; /* Fills screen without zooming weirdly */
+  background-attachment: fixed; /* Optional: adds a parallax feel */
   min-height: 100vh;
   padding: 4rem;
   display: flex;
@@ -34,7 +35,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 
