@@ -147,10 +147,45 @@
 </footer>
 
 <script>
-  document.querySelector(".btn-road-map").addEventListener("click", function () {
-    document.getElementById("roadmap").scrollIntoView({ behavior: "smooth" });
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelector(".btn-road-map").addEventListener("click", () => {
+      document.getElementById("roadmap").scrollIntoView({ behavior: "smooth" });
+    });
+
+    document.querySelector(".btn-How-to-buy").addEventListener("click", () => {
+      document.getElementById("how-to-buy").scrollIntoView({ behavior: "smooth" });
+    });
+
+    document.querySelector(".btn-Token").addEventListener("click", () => {
+      document.getElementById("tokenomics").scrollIntoView({ behavior: "smooth" });
+    });
+
+    document.querySelector(".btn-Home").addEventListener("click", () => {
+      document.getElementById("Main_Page").scrollIntoView({ behavior: "smooth" });
+    });
+
+    document.querySelector(".btn-WhitePaper").addEventListener("click", () => {
+      document.getElementById("tokenomics").scrollIntoView({ behavior: "smooth" });
+    });
+
+    document.querySelector(".btn-Launch-Coin").addEventListener("click", () => {
+      window.open("https://solscan.io/token/PUT_YOUR_TOKEN_HERE", "_blank");
+    });
+
+    document.querySelector(".btn-start").addEventListener("click", () => {
+      window.open("https://pump.fun/PUT_YOUR_COIN_HERE", "_blank");
+    });
+
+    document.querySelector(".btn-options").addEventListener("click", () => {
+      window.open("https://dexscreener.com/solana/PUT_YOUR_PAIR_HERE", "_blank");
+    });
+
+    document.querySelector(".btn-exit").addEventListener("click", () => {
+      window.open("https://t.me/TheLionCommunity", "_blank");
+    });
   });
 </script>
+
 
 </body>
 </html>
