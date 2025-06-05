@@ -1,0 +1,436 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+#Main_Page {
+  position: relative; /* 👈 enables positioning child elements */
+  background: url('images/Main_Page.png') no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+
+#roadmap {
+  background: url('images/second_Pa.jpg') no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+
+
+footer {
+  position: static;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 1); /* semi-transparent black */
+  backdrop-filter: blur(8px); /* glass effect */
+  color: white;
+  text-align: center;
+  padding: 2rem 2rem;
+  font-size: 1rem;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+.button-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+button {
+  position: absolute;
+  pointer-events: auto;
+  color: white;
+  border-radius: 20px;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  white-space: nowrap;
+  text-shadow: 1px 1px 3px black;
+}
+
+/* 🎮 Start Button */
+.btn-start {
+  top: 67.5%;
+  left: 0.5%;
+  background-color: black;
+  padding: 12px 44px;         /* Bigger height and width */
+  font-size: 1.5rem;             /* Larger text */
+  border-radius: 15px;
+}
+
+/* ⚙️ Options Button */
+.btn-options {
+  top: 67.5%;
+  left: 18.5%;
+  background-color: black;
+  padding: 12px 30px;         /* Bigger height and width */
+  font-size: 1.5rem;
+  border-radius: 15px;
+}
+
+/* ❌ Exit Button */
+.btn-exit {
+  top: 67.5%;
+  left: 33.5%;
+  background-color: black;
+  padding: 12px 33px;         /* Bigger height and width */
+  font-size: 1.5rem;
+  border-radius: 15px;
+}
+
+.btn-road-map {
+  top: 3%;
+  left: 45%;
+  background-color: black;
+  padding: 12px 35px;         /* Bigger height and width */
+  font-size: 1rem;             /* Larger text */
+  border-radius: 15px;
+}
+
+.btn-How-to-buy{
+  top: 3%;
+  left: 67%;
+  background-color: black;
+  padding: 12px 44px;         /* Bigger height and width */
+  font-size: 1.0rem;             /* Larger text */
+  border-radius: 15px;
+}
+
+.btn-Home{
+  top: 3%;
+  left: 24%;
+  background-color: black;
+  padding: 12px 44px;         /* Bigger height and width */
+  font-size: 1rem;             /* Larger text */
+  border-radius: 15px;
+}
+
+.btn-Token{
+  top: 3%;
+  left: 33.7%;
+  background-color: black;
+  padding: 12px 35px;         /* Bigger height and width */
+  font-size: 1rem;             /* Larger text */
+  border-radius: 15px;
+}
+
+
+.btn-WhitePaper{
+  top: 3%;
+  left: 55.2%;
+  background-color: black;
+  padding: 12px 40px;         /* Bigger height and width */
+  font-size: 1rem;             /* Larger text */
+  border-radius: 15px;
+}
+
+.btn-Launch-Coin{
+  top: 3%;
+  left: 80.2%;
+  background-color: black;
+  padding: 12px 30px;         /* Bigger height and width */
+  font-size: 1.5rem;             /* Larger text */
+  border-radius: 20px;
+}
+
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.roadmap-section {
+  padding: 80px 20px;
+  background: none;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.roadmap-title {
+  font-size: 42px;
+  margin-bottom: 60px;
+  font-weight: bold;
+  color: #ffe34e;
+  text-shadow: 0 0 15px #ffe34e80;
+}
+
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  padding-left: 0;
+  max-width: 900px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #ffea00, #ff0099);
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+.timeline-item {
+  position: relative;
+  margin: 50px 0;
+  z-index: 2;
+}
+
+.timeline-content {
+  background: rgba(0, 0, 0, 0.75);
+  border: 1px solid #ffea00;
+  box-shadow: 0 0 25px rgba(255, 255, 0, 0.3), 0 0 50px rgba(255, 0, 200, 0.2);
+  border-radius: 20px;
+  padding: 25px 30px;
+  width: 80%;
+  margin: auto;
+  color: #fff;
+  backdrop-filter: blur(6px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 35px rgba(255, 255, 0, 0.5), 0 0 70px rgba(255, 0, 200, 0.4);
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+  margin-left: 100px;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  margin-right: 100px;
+}
+
+.timeline-content h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #ffea00;
+}
+
+.timeline-content p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+
+.goals-section {
+  padding: 80px 20px;
+  background: linear-gradient(145deg, #0f0f0f, #1a1a1a);
+  text-align: center;
+  color: #fff;
+}
+
+.goals-title {
+  font-size: 42px;
+  margin-bottom: 50px;
+  font-weight: bold;
+  color: #ffe34e;
+  text-shadow: 0 0 15px #ffe34e80;
+}
+
+.goals-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1000px;
+  margin: auto;
+  justify-items: center;
+}
+
+.goal-box {
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid #f4d03f55;
+  border-radius: 20px;
+  padding: 25px 20px;
+  box-shadow:
+    0 0 25px rgba(255, 255, 0, 0.25),
+    0 0 45px rgba(255, 255, 0, 0.15),
+    inset 0 0 10px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  max-width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.goal-box:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 0 35px rgba(255, 255, 0, 0.35),
+    0 0 65px rgba(255, 0, 200, 0.25),
+    inset 0 0 10px rgba(255, 255, 255, 0.15);
+}
+
+
+.goal-box h3 {
+  font-size: 20px;
+  color: #ffe34e;
+  margin-bottom: 10px;
+}
+
+.goal-box p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.how-to-buy-section{
+  padding: 80px 20px;
+  background:linear-gradient(145deg, #0f0f0f, #1a1a1a);
+  color: #fff;
+}
+
+.buy-box-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+.buy-box {
+  background: linear-gradient(145deg, #0f0f0f, #1a1a1a);
+  border: 1px solid #f4d03f55;
+  border-radius: 20px;
+  padding: 25px 20px;
+  box-shadow: 0 0 25px rgba(255, 255, 0, 0.2);
+  backdrop-filter: blur(8px);
+  text-align: left;
+  background: linear-gradient(145deg, #0f0f0f, #1a1a1a);
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.buy-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 35px rgba(255, 255, 0, 0.3);
+}
+
+.buy-box h3 {
+  color: #ffe34e;
+  margin-bottom: 10px;
+  font-size: 20px;
+  text-shadow: 0 0 5px #ffe34e50;
+}
+
+.buy-box p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.buy-title {
+  font-size: 42px;
+  margin-bottom: 50px;
+  font-weight: bold;
+  color: #ffe34e;
+  text-align: center;
+  text-shadow: 0 0 15px #ffe34e80;
+}
+
+.tokenomics-section {
+  padding: 80px 20px;
+  background: linear-gradient(145deg, #0f0f0f, #1a1a1a);
+  color: #fff;
+}
+
+.tokenomics-title {
+  font-size: 42px;
+  margin-bottom: 50px;
+  font-weight: bold;
+  color: #ffe34e;
+  text-align: center;
+  text-shadow: 0 0 15px #ffe34e80;
+}
+
+.tokenomics-layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.tokenomics-box-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  flex: 1 1 60%;
+}
+
+.tokenomics-box {
+  background: rgba(0, 0, 0, 0.75);
+  border: 1px solid #f4d03f55;
+  border-radius: 20px;
+  padding: 25px 20px;
+  box-shadow: 0 0 25px rgba(255, 255, 0, 0.2);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tokenomics-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 35px rgba(255, 255, 0, 0.35);
+}
+
+.tokenomics-box h3 {
+  color: #ffe34e;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.tokenomics-box p,
+.tokenomics-box ul {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.tokenomics-box ul {
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.tokenomics-chart-container {
+  flex: 1 1 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tokenomics-chart-img {
+  width: 225%;
+  max-width: 450px;
+  border-radius: 26px;
+  background-color: #0f0f0f;
+  box-shadow: 0 0 25px rgba(255, 255, 0, 0.25);
+}
